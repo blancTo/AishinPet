@@ -1,0 +1,9 @@
+import {default as Header} from "./Header";
+import {default as Nav} from "./Nav";
+import {default as Mainimege} from "./Mainimege";
+import {default as Seo} from "./Seo";
+import {default as BreadCrumb} from "./BreadCrumb";
+import {default as Sidebar} from "./Sidebar";
+import {default as Footer} from "./Footer";
+import {default as PageTitle} from "./PageTitle"
+import {default as Layout} from './Layout'

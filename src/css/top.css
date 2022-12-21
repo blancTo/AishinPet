@@ -776,15 +776,16 @@ table.isp-business-calendar td {
 	position:relative;
 	overflow:hidden;
 	margin-bottom:28px;
-}
-.service-pake div {
-    width: 30%;
-	float:left;
-	margin-top:24px;
-}
+	flex-direction: column;}
+
+	.service_img {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 20px!important;
+	}
+
 .service-pake section {
-    width: 65%;
-	float:right;
+    width: 100%!important;
 }
 #main .service-pake h2 {
     font-size: 115%;
@@ -798,9 +799,10 @@ table.isp-business-calendar td {
 	display:none;
 }
 #main .service-pake p a {
-    width: 70%;
-    padding-bottom: 6px;
+    width: 100%;
+    padding: 15px;
     margin-top: 14px;
+	font-size: 120%;
 }
 
 #topics{
@@ -964,7 +966,7 @@ table.isp-business-calendar td {
 }
 @media (max-width: 1024px){
 	.wrap.dryice{
-		width: 90%;
+		width: 100%!important;
 		margin: 0 auto;
 	}
 	.dryice-inner{

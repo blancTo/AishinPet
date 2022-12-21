@@ -6,13 +6,55 @@ import Seo from "../components/Seo"
 import Header from "../components/Header"
 import Nav from "../components/Nav"
 import Layout from "../components/Layout"
+import PageTitle from '../components/PageTitle';
+
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons"
+
+const siteurl = "https://www.aishin2484.jp";
 
 const TopicsPost = ({data}) => {
   return (
     <>
         <Header />
         <Nav />
-        
+        <p id="page-top"><AnchorLink offset="0" to={'/topics/' + data.microcmsTopics.category.slug + '/' + data.microcmsTopics.topicsId + '/#pagetop'} title="Pagetop"><FontAwesomeIcon icon={faChevronUp} /></AnchorLink></p>
+
+        <section id="page-info" className="topics">
+        <div id="breadcrumb">
+            <ul itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li className='breadcrumb__item' itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href={siteurl} itemprop="item">
+                        <span itemprop="name">ホーム</span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                </li>                    
+                <li>
+                    <a href={ siteurl + '/topics/'} itemprop="item">
+                        <span>トピックス</span>
+                    </a>
+                    <meta itemprop="position" content="2" />
+                </li>
+                <li>
+                <a href={ siteurl + '/topics/' + data.microcmsTopics.category.slug + '/'} itemprop="item">
+                        <span>{data.microcmsTopics.category.name}</span>
+                    </a>
+                    <meta itemprop="position" content="3" />
+                </li>
+                <li>
+                <a href={ siteurl + '/topics/' + data.microcmsTopics.category.slug + '/' + data.microcmsTopics.topicsId } itemprop="item">
+                        <span>{data.microcmsTopics.title}</span>
+                    </a>
+                    <meta itemprop="position" content="4" />
+                </li>
+            </ul>
+        </div>
+          <PageTitle
+          title={data.microcmsTopics.category.name}
+          slug={data.microcmsTopics.category.slug}
+          />
+        </section>
         <Layout>
             <Seo />
 

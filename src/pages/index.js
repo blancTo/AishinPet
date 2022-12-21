@@ -269,6 +269,82 @@ export default function Home({data}) {
   )
 }
 
+const jsonLd = {
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebSite",
+      "@id":"https://www.aishin2484.jp/#website",
+      "url":"https://www.aishin2484.jp/",
+      "name":"愛心ペットセレモ二ー埼玉",
+      "inLanguage":"ja",
+      "publisher":{
+        "@id":"https://www.aishin2484.jp/#organization"
+      }      
+    },
+    {
+      "@type":"Organization",
+      "@id":"https://www.aishin2484.jp/#organization",
+      "name":"愛心ペットセレモ二ー埼玉",
+      "url":"https://www.aishin2484.jp/",
+      "logo":{
+        "@type":"ImageObject",
+        "@id":"https://www.aishin2484.jp/#organizationLogo",
+        "url":"https://www.aishin2484.jp/images/logo.png",
+        "width":392,
+        "height":62
+      },
+      "image":{
+        "@id":"https://www.aishin2484.jp/#organizationLogo"
+      },
+      "contactPoint":{
+        "@type":"ContactPoint",
+        "telephone":"+81120-28-3374",
+        "contactType":"Reservations"
+      }
+    },
+    {
+      "@type":"BreadcrumbList",
+      "@id":"https://www.aishin2484.jp/#breadcrumblist",
+      "itemListElement":[
+        {
+          "@type":"ListItem",
+          "@id":"https://www.aishin2484.jp/#listItem",
+          "position":1,
+          "item":{
+            "@type":"WebPage",
+            "@id":"https://www.aishin2484.jp/",
+            "name":"愛心ペットセレモ二ー埼玉",
+            "description":"埼玉県のペット火葬・葬儀のことなら「愛心ペットセレモニー埼玉」にお任せ下さい。猫・犬はもちろん、うさぎや小鳥の火葬・葬儀も対応。",
+            "url":"https://www.aishin2484.jp/"
+          }
+        }
+      ]
+    },
+    {
+      "@type":"WebPage",
+      "@id":"https://www.aishin2484.jp/#webpage",
+      "url":"https://www.aishin2484.jp/",
+      "name":"愛心ペットセレモ二ー埼玉",
+      "inLanguage":"ja",
+      "isPartOf":{
+        "@id":"https://www.aishin2484.jp/#webpage"
+      },
+      "breadcrumb":{
+        "@id":"https://www.aishin2484.jp/#breadcrumblist"
+      },
+      "datePublished":"2022-12-19T01:06:53+09:00",
+      "dateModified":"2022-12-21T04:27:08+09:00"
+    }
+  ]
+}
+
+export const Head = () => (
+  <>
+    <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>    
+  </>
+)
+
 export const query = graphql`
 query {
   allMicrocmsTopics(limit: 5, sort: {date: DESC}) {

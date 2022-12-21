@@ -1,6 +1,6 @@
 const path = require("path")
 exports.createPages = ({graphql, actions}) => {
-  const { createPage } = actions;
+  const { createPage } = actions; 
 
   return graphql(
     `
@@ -38,3 +38,4 @@ exports.createPages = ({graphql, actions}) => {
     
   })
 }
+

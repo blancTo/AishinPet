@@ -5,9 +5,12 @@ import LayoutTopics from '../../../components/LayoutTopics'
 import Seo from '../../../components/Seo';
 import Header from '../../../components/Header';
 import Nav from '../../../components/Nav';
-import BreadCrumb from '../../../components/BreadCrumb';
+import BreadCrumbCat from '../../../components/BreadCrumb';
 import PageTitle from '../../../components/PageTitle';
-import PageTop from '../../../components/PageTop';
+
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons"
 
 const pagemeta = {
     subTitle:`ブログ`,
@@ -18,18 +21,25 @@ const blog = ({data}) => {
   return (
     <>
         <Header />
+
         <Nav />
-        <PageTop slug={pagemeta.slug} />
+
+        {data.allMicrocmsTopics.edges.map(({ node }) => (
+          <p id="page-top">
+            <AnchorLink offset="0" to={'/topics/' + node.category.slug + '/#pagetop'} title="Pagetop"><FontAwesomeIcon icon={faChevronUp} /></AnchorLink>
+          </p>
+        ))}
+
             <section id="page-info" className="topics">
-        <BreadCrumb
-        title={pagemeta.subTitle}
-        slug="blog"
-        />
-        <PageTitle
-        title={pagemeta.subTitle}
-        slug={pagemeta.slug}
-        />
-        </section>
+              <BreadCrumbCat
+              title={pagemeta.subTitle}
+              slug="news"
+              />
+              <PageTitle
+              title={pagemeta.subTitle}
+              slug={pagemeta.slug}
+              />
+            </section>
         <LayoutTopics>
             <Seo
             title={pagemeta.subTitle}

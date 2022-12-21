@@ -41,7 +41,17 @@ const SEO = ({ title, description, image, article }) => {
       {seo.description && (
         <meta name="twitter:description" content={seo.description} />
       )}
-      {seo.image && <meta name="twitter:image" content={seo.image} />}      
+      {seo.image && <meta name="twitter:image" content={seo.image} />}
+      
+      {/*
+  <PageMap>
+    <DataObject type="thumbnail">
+<Attribute name="src" value="https://www.aishin2484.jp/wp/wp-content/themes/aishin_pet_ceremony/image/ogp.jpg"/>
+<Attribute name="width" value="120"/>
+<Attribute name="height" value="120"/>
+    </DataObject>
+  </PageMap>
+*/}
       
     </Helmet>
   )

@@ -9,8 +9,8 @@
  */
 
 require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`
-});
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
   siteMetadata: {
@@ -65,7 +65,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-microcms',
       options: {
-        apiKey: 'pwflvZ07ONay0up39Atuph0PSIBXE9unb7xj',
+        apiKey: process.env.API_KEY,
         serviceId: 'aishin2484',
         apis: [
           {

@@ -5,9 +5,13 @@ import LayoutTopics from '../../../components/LayoutTopics'
 import Seo from '../../../components/Seo';
 import Header from '../../../components/Header';
 import Nav from '../../../components/Nav';
-import BreadCrumb from '../../../components/BreadCrumb';
+import BreadCrumbCat from '../../../components/BreadCrumbCat';
 import PageTitle from '../../../components/PageTitle';
 import PageTop from '../../../components/PageTop';
+
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons"
 
 const pagemeta = {
     subTitle:`お知らせ`,
@@ -19,17 +23,23 @@ const news = ({data}) => {
     <>
         <Header />
         <Nav />
-        <PageTop slug={pagemeta.slug} />
+        
+        {data.allMicrocmsTopics.edges.map(({ node }) => (
+          <p id="page-top">
+            <AnchorLink offset="0" to={'/topics/' + node.category.slug + '/#pagetop'} title="Pagetop"><FontAwesomeIcon icon={faChevronUp} /></AnchorLink>
+          </p>
+        ))}
+
             <section id="page-info" className="topics">
-        <BreadCrumb
-        title={pagemeta.subTitle}
-        slug="news"
-        />
-        <PageTitle
-        title={pagemeta.subTitle}
-        slug={pagemeta.slug}
-        />
-        </section>
+              <BreadCrumbCat
+              title={pagemeta.subTitle}
+              slug="news"
+              />
+              <PageTitle
+              title={pagemeta.subTitle}
+              slug={pagemeta.slug}
+              />
+            </section>
         <LayoutTopics>
             <Seo
             title={pagemeta.subTitle}
@@ -39,17 +49,20 @@ const news = ({data}) => {
               <h1 id="display-item">{pagemeta.subTitle}の記事一覧</h1>
             
                 {data.allMicrocmsTopics.edges.map(({ node }) => (
+
+                    
+                  
                     <article class="list">
                         <p class="date">
-                            <span className='cat_list'>{node.category.name}</span>
+                            <Link to={'/topics/' + node.category.slug}>{node.category.name}</Link>
                             <span class="blobdate">{node.date}</span>
                         </p>
                         <div class="rack">
                             <h1 class="arrange">
-                                <a href={'/topics/' + node.topicsId}>{node.title}</a>
+                                <a href={'/topics/' + node.category.slug + '/' + node.topicsId}>{node.title}</a>
                             </h1>
                             <p class="preface">
-                                <a href={'/topics/' + node.topicsId}>
+                                <a href={'/topics/' + node.category.slug + '/' + node.topicsId}>
                                   {node.excerpt}
                                 </a>
                             </p>
@@ -66,7 +79,7 @@ export default news
 
 export const query = graphql`
 query {
-  allMicrocmsTopics(filter: {category: {slug: {eq: "news"}}}, limit: 20) {
+  allMicrocmsTopics(filter: {category: {slug: {eq: "news"}}}, limit: 30) {
     edges {
       node {
         title

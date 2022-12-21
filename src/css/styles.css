@@ -550,6 +550,19 @@ footer #links ul li {
 }
 .bt01:hover { color: #fff; opacity: 0.5;}
 
+@media screen and (max-width:1024px){
+	.bt01 {
+		font-size: 160%;
+		color: #fff;
+		padding:10px 20px;
+		text-align: center;
+		background: #F5A473;
+		display: inline-block;
+		transition: all .3s ease;
+		margin: 20px 0;
+	}
+}
+
 @keyframes fadeIn {
 	0% {
 	  display: none;
@@ -611,4 +624,66 @@ footer #links ul li {
 }
 
   
-} 
+}
+
+#book {
+    background: #f1f1f1;
+    width: 100%;
+}
+
+#book h2 {
+    font-size: 130%;
+    font-weight: 700;
+    color: #222;
+    background: #eee;
+	padding: 20px;
+	position: relative;
+}
+
+#book h2:before {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 6px;
+    height: 20px;
+    margin-top: -10px;
+    background: #333;
+    content: '';
+}
+
+#book h3 {
+    font-size: 120%;
+    font-weight: 700;
+    color: #333;
+    border-bottom: 1px dashed #ccc;
+	position: relative;
+	padding: 20px 0 20px 18px;
+	margin-bottom: 22px!important;
+}
+
+#book h3:before {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 6px;
+    height: 18px;
+    margin-top: -9px;
+    background: #333;
+    content: '';
+}
+
+#book-inside {
+    width: 100%;
+    max-width: 765px;
+    background: #fff;
+    padding: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#book-wrap {
+    border: 1px solid #f1f1f1;
+    padding: 5% 6%;
+}

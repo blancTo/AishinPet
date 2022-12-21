@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { Link,graphql } from 'gatsby'
+
 import { StaticImage } from "gatsby-plugin-image"
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -12,7 +14,7 @@ import Mainimege from '../components/Mainimege';
 import TopCalender from '../components/TopCalender'
 import Footer from '../components/Footer';
 
-export default function Home() {
+export default function Home({data}) {
   return (
     <>
 
@@ -82,27 +84,15 @@ export default function Home() {
             </section>
             <section id="business-info">
               <article>
-              <p>営業案内・ご予約状況</p>
+
               
-              <p>１２月９日（金）通常営業</p>
+              <div
+                    dangerouslySetInnerHTML={{
+                        __html:data.microcmsNotice.txt
+                    }}
+                />
               
-              <p>※今週の夜間ご対応日　12月6日・9日（火・金）となります。　19：30～　「個別火葬」１組様<br />
-              ペットさんの大きさや当日の進行状況により、ご予約時間が30分程度前後する場合がございます。<br />
-              また、当日、15時以降のご予約の場合、夜間の受付はできない場合がございます。<br />
-              予めご了承下さいませ。<br />
-              予定は、毎週日曜日の夜更新いたします。</p>
-              
-              <p>お問い合せ及び、ご予約につきまして、接客中や外出中など、一時的に電話に出れない場合がございます。<br />
-              ご迷惑をおかけしますが、少し時間を空けてからおかけ直しくださいませ。</p>
-              
-              <p>※朝一番、７：００時は電話が重なり繋がりにくい事が多々ございます。</p>
-              
-              <p>※消費税の増税に伴い、令和元年10月1日より、増税分の料金改正をいたしました。</p>
-              
-              <p>※現在、お問い合わせメールを一時閉鎖しております。<br />
-                再開までしばらくお待ちくださいませ。<br />
-                ご迷惑をおかけしますが、何卒ご了承くださいませ。</p>
-                
+
               </article>
               <section id="contact-information">
                 <div id="contact-information-box">
@@ -142,7 +132,7 @@ export default function Home() {
             <h5 className="midasi"><span><img src="/images/icon/2.png" alt="ペット火葬・葬儀サービス案内犬のアイコン" /></span>ペット火葬・葬儀サービスのご案内</h5>
             <div className="flex-box">
               <section className="service-pake">
-                <div><img src="/images/top/1.jpg" alt="ペット斎場火葬" /></div>
+                <div className='service_img'><StaticImage src="../images/top/1.jpg" maxWidth={180} alt="ペット斎場火葬" /></div>
                 <section>
                   <h2>ペット火葬・葬儀</h2>
                   <p>当施設（ペット火葬場）は、固定炉でのペット火葬を執り行っております。猫ちゃん及び、小型犬～大型犬までお立ち会いができます。</p>
@@ -150,7 +140,7 @@ export default function Home() {
                 </section>
               </section>
               <section className="service-pake">
-                <div><img src="/images/top/2.jpg" alt="ペット葬儀・ホームセレモニー" /></div>
+                <div className='service_img'><StaticImage src="../images/top/2.jpg" alt="ペット葬儀・ホームセレモニー" /></div>
                 <section>
                   <h2>ホームセレモニー</h2>
                   <p>火葬後のご遺骨はどうなさっ ていますか？自宅向けのペット墓石を造りご供養されてはいかがでしょう。<br /><br /></p>
@@ -158,7 +148,7 @@ export default function Home() {
                 </section>
               </section>
               <section className="service-pake">
-                <div><img src="/images/top/3.jpg" alt="ペット納骨場" /></div>
+                <div className='service_img'><StaticImage src="../images/top/3.jpg" alt="ペット納骨場" /></div>
                 <section>
                   <h2>納骨サービス</h2>
                   <p>斎場に併設されたペット霊園の慰霊塔に納骨致します。合同納骨となりますが、毎日丁寧な供養を行います。<br /><br /></p>
@@ -166,7 +156,7 @@ export default function Home() {
                 </section>
               </section>
               <section className="service-pake">
-                <div><img src="/images/top/4.jpg" alt="ペットの粉骨サービス" /></div>
+                <div className='service_img'><StaticImage src="../images/top/4.jpg" alt="ペットの粉骨サービス" /></div>
                 <section>
                   <h2>粉骨サービス</h2>
                   <p>愛するわが子を海や山・・または自宅の庭へ散骨してあげたい。温もりを感じさせる形に遺したいという方々へのサービスです。</p>
@@ -174,7 +164,7 @@ export default function Home() {
                 </section>
               </section>
               <section className="service-pake">
-                <div><img src="/images/top/5.jpg" alt="メモリアルジュエリー" /></div>
+                <div className='service_img'><StaticImage src="../images/top/5.jpg" alt="メモリアルジュエリー" /></div>
                 <section>
                   <h2>メモリアルジュエリー</h2>
                   <p>メモリアルジュエリーは、大切なパートナーのお遺骨を樹脂で特殊加工し永遠の形見としてお持ちいただくオンリーワンジュエリー。<br /><span style={{color: '#f07020', fontSize: '85%'}}>制作をしばらく間お休みいたします。</span></p>
@@ -182,7 +172,7 @@ export default function Home() {
                 </section>
               </section>
               <section className="service-pake">
-                <div><img src="/images/top/6.jpg" alt="虹の橋ゆうびん館" /></div>
+                <div className='service_img'><StaticImage src="../images/top/6.jpg" alt="虹の橋ゆうびん館" /></div>
                 <section>
                   <h2>虹の橋ゆうびん館（お手紙）</h2>
                   <p>「虹の橋のたもと」にいる大好きな子にお手紙を書いてみませんか？　2～3週間後、あの子から「写真入りオリジナルメッセージ」が届きます。<br /><span style={{color: '#f07020', fontSize: '92%', fontWeight: 'bold'}}>当施設にてご購入いただけます。</span></p>
@@ -197,7 +187,7 @@ export default function Home() {
           <div className="wrap dryice">
             <div className="dryice-inner">
               <div className="img">
-                <img src="/images/top/dryice.jpg" alt="ドライアイスの写真" />
+                <StaticImage src="../images/top/dryice.jpg" alt="ドライアイスの写真" />
               </div>
               <div className="txt">
                 <h2 className="midasi3"><span><img src="/images/icon/5.png" alt="ドライアイス店の紹介／雪のアイコン" /></span>ドライアイス店のご紹介</h2>
@@ -210,49 +200,26 @@ export default function Home() {
 
         <section className="container t-box">
         <div className="wrap">
-          <article id="topics">
+        <article id="topics">
             <div className="float-box">
-              <section id="topics-header">
-                <h2>トピックス</h2>
-                <p><a href="https://www.aishin2484.jp/topics">&gt;&nbsp;一覧を見る</a></p><div className="both" />
-              </section>
-              <dl className="news">
-                <dt>2022年7月6日</dt>
-                <dd className="news-title"><a href="https://www.aishin2484.jp/tencommandments/">「犬の十戒」のお話</a></dd>
-                <dd>
-                  このお話はわんちゃんと暮らしている方であれば、知っている人も多いかもしれません。
-                  「犬...</dd>
-              </dl>
-              <dl className="news">
-                <dt>2022年7月6日</dt>
-                <dd className="news-title"><a href="https://www.aishin2484.jp/rainbowbridge/">「虹の橋」のお話</a></dd>
-                <dd>
-                  「虹の橋」は大切なペットとのお別れを書いたもので、動物・ペットを愛する多くの人々の共感を呼び...</dd>
-              </dl>
-              <dl className="news">
-                <dt>2022年6月15日</dt>
-                <dd className="news-title"><a href="https://www.aishin2484.jp/%e3%83%9a%e3%83%83%e3%83%88%e3%81%a8%e3%81%8a%e5%88%a5%e3%82%8c%e3%81%ae%e9%9a%9b%e3%81%ab%e7%9f%a5%e3%81%a3%e3%81%a6%e3%81%8a%e3%81%8d%e3%81%9f%e3%81%84%e6%b3%95%e5%be%8b%e3%81%a8%e7%9f%a5%e8%ad%98/">ペットと心穏やかなお別れをするために知っ...</a></dd>
-                <dd>
-                  &nbsp;
-                  わが仔が亡くなった時、どのような形でお見送りしようと思いますか？「うちの...</dd>
-              </dl>
-              <dl className="news">
-                <dt>2021年12月29日</dt>
-                <dd className="news-title"><a href="https://www.aishin2484.jp/%e7%b5%82%e6%b4%bb%e3%81%af%e3%80%81%e3%82%8f%e3%81%8c%e4%bb%94%ef%bc%88%e3%83%9a%e3%83%83%e3%83%88%ef%bc%89%e3%81%ab%e3%82%82%e5%a4%a7%e5%88%87%e3%81%a7%e3%81%99/">“終活”は、わが仔（ペット）にも大切です</a></dd>
-                <dd>
-                  &nbsp;
-                  ペット葬儀に携わっていると、飼い主さんたちの悲しむ声をよく耳にします。
-                  ...</dd>
-              </dl>
-              <dl className="news">
-                <dt>2021年11月1日</dt>
-                <dd className="news-title"><a href="https://www.aishin2484.jp/%e3%83%8d%e3%82%b3%e3%81%a1%e3%82%83%e3%82%93%e3%81%ae%e9%a1%94%e3%81%ae%e6%af%9b%e3%81%8c%e7%aa%81%e7%84%b6%e6%8a%9c%e3%81%91%e3%81%9f%e3%82%89/">ネコちゃんの顔の毛が突然抜けたら</a></dd>
-                <dd>ネコちゃんの顔の毛が突然抜けたら
-                  &nbsp;
-                  ネコちゃんの顔周りの被毛に突然脱毛が見ら...</dd>
-              </dl>
-            </div>
-          </article>
+            <section id="topics-header">
+              <h2>トピックス</h2>
+              <p><a href="/topics/">&gt;&nbsp;一覧を見る</a></p><div class="both"></div>
+            </section>
+          {data.allMicrocmsTopics.edges.map(({ node }) => (
+          
+            
+            <dl className='news'>
+              <dt>{node.date}</dt>
+              <dd><a href={'topics/' + node.category.slug + '/' + node.topicsId}>{node.title}</a><br />
+              {node.excerpt}...</dd>
+            </dl>
+          
+                      
+            
+                ))}
+                  </div>
+                </article>
         </div>
       </section>
 
@@ -260,12 +227,12 @@ export default function Home() {
         <div className="wrap">
           <article className="poem">
             <div className="poem-rb">
-              <a href="/rainbowbridge">
+              <a href="/topics/news/w3l1rlm63/">
                 <StaticImage src="../images/top/RainbowBridge.jpg" alt="虹の橋のお話" />
               </a>
             </div>
             <div className="poem-tc">
-              <a href="/tencommandments">
+              <a href="/topics/news/n5oyirg6s/">
                 <StaticImage src="../images/top/TenCommandments.jpg" alt="犬の十戒のお話" />
               </a>
             </div>
@@ -288,11 +255,11 @@ export default function Home() {
         <aside id="links">
           <ul className="wrap">            
             <li><a className="hover" href="https://www.petsatooyakai.com/" target="_blank" rel="noopener noreferrer">
-                <img src="/images/footer/bunner_satooyakai.jpg" alt="NPO法人ペット里親会" /></a></li>
+                <StaticImage src="../images/footer/bunner_satooyakai.jpg" alt="NPO法人ペット里親会" /></a></li>
             <li><a className="hover" href="http://www.petsougi.net/" target="_blank" rel="noopener noreferrer">
-                <img src="/images/footer/bunner_anshin.jpg" alt="ペット葬儀・霊園ネットの安心マーク" /></a></li>
+                <StaticImage src="../images/footer/bunner_anshin.jpg" alt="ペット葬儀・霊園ネットの安心マーク" /></a></li>
             <li><a className="hover" href="http://www.pet-farewell.net/"target="_blank" rel="noopener noreferrer">
-                <img src="/images/footer/bunner_sougimap.jpg" alt="ペット葬儀マップ"  /></a></li>
+                <StaticImage src="../images/footer/bunner_sougimap.jpg" alt="ペット葬儀マップ"  /></a></li>
           </ul>
         </aside>
 
@@ -301,3 +268,103 @@ export default function Home() {
     </>
   )
 }
+
+const jsonLd = {
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebSite",
+      "@id":"https://www.aishin2484.jp/#website",
+      "url":"https://www.aishin2484.jp/",
+      "name":"愛心ペットセレモ二ー埼玉",
+      "inLanguage":"ja",
+      "publisher":{
+        "@id":"https://www.aishin2484.jp/#organization"
+      }      
+    },
+    {
+      "@type":"Organization",
+      "@id":"https://www.aishin2484.jp/#organization",
+      "name":"愛心ペットセレモ二ー埼玉",
+      "url":"https://www.aishin2484.jp/",
+      "logo":{
+        "@type":"ImageObject",
+        "@id":"https://www.aishin2484.jp/#organizationLogo",
+        "url":"https://www.aishin2484.jp/images/logo.png",
+        "width":392,
+        "height":62
+      },
+      "image":{
+        "@id":"https://www.aishin2484.jp/#organizationLogo"
+      },
+      "contactPoint":{
+        "@type":"ContactPoint",
+        "telephone":"+81120-28-3374",
+        "contactType":"Reservations"
+      }
+    },
+    {
+      "@type":"BreadcrumbList",
+      "@id":"https://www.aishin2484.jp/#breadcrumblist",
+      "itemListElement":[
+        {
+          "@type":"ListItem",
+          "@id":"https://www.aishin2484.jp/#listItem",
+          "position":1,
+          "item":{
+            "@type":"WebPage",
+            "@id":"https://www.aishin2484.jp/",
+            "name":"愛心ペットセレモ二ー埼玉",
+            "description":"埼玉県のペット火葬・葬儀のことなら「愛心ペットセレモニー埼玉」にお任せ下さい。猫・犬はもちろん、うさぎや小鳥の火葬・葬儀も対応。",
+            "url":"https://www.aishin2484.jp/"
+          }
+        }
+      ]
+    },
+    {
+      "@type":"WebPage",
+      "@id":"https://www.aishin2484.jp/#webpage",
+      "url":"https://www.aishin2484.jp/",
+      "name":"愛心ペットセレモ二ー埼玉",
+      "inLanguage":"ja",
+      "isPartOf":{
+        "@id":"https://www.aishin2484.jp/#webpage"
+      },
+      "breadcrumb":{
+        "@id":"https://www.aishin2484.jp/#breadcrumblist"
+      },
+      "datePublished":"2022-12-19T01:06:53+09:00",
+      "dateModified":"2022-12-21T04:27:08+09:00"
+    }
+  ]
+}
+
+export const Head = () => (
+  <>
+    <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>    
+  </>
+)
+
+export const query = graphql`
+query {
+  allMicrocmsTopics(limit: 5, sort: {date: DESC}) {
+    edges {
+      node {
+        title
+        topicsId
+        slug
+        date(formatString: "YYYY年MM月DD日")
+        category {
+          slug
+          name
+          id
+        }
+        excerpt
+      }
+    }
+  }
+  microcmsNotice {
+    txt
+  }
+}
+`

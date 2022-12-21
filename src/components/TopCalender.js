@@ -10,8 +10,8 @@ export default class App extends React.Component {
         date: new Date(2022, 12, 1),
         //月のデータ
         month_days: {
-          20221221: { is_holiday: true },
-          20221211: { is_holiday: true,text: '定休日' }
+          //20221221: { is_holiday: true },
+          //20221211: { is_holiday: true,text: '定休日' }
         }
       };
       this.getTileClass = this.getTileClass.bind(this);

@@ -57,7 +57,7 @@
 #page-info.faq{
 	border-bottom:solid 16px #db6855;
 }
-#page-info.access{
+#page-info.access,#page-info.topics{
 	border-bottom:solid 16px #7eae58;
 }
 #page-info.company-profile{
@@ -395,6 +395,19 @@
         margin-left:0%;
         margin-right:0%;
     }
+	.ggmap {
+		width: 100%;
+		position: relative;
+		padding-top: 56.25%;
+	  }
+	  
+	  .ggmap iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	  }
 }
 
 #main .goods-rack{
@@ -1108,4 +1121,18 @@ div.map-canvas{
 }
 #submain .blog div.table {
     margin-bottom: 1em;
+}
+
+.cat_list {
+    color: #fff;
+    background: #b1c8dc;
+    display: block;
+    padding: 5px 14px;
+    margin-right: auto;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    text-align: center;
+    margin-left: auto;
+    max-width: 54px;
 }

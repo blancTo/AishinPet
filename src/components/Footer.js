@@ -1,4 +1,5 @@
 import React from 'react'
+import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 
 const Footer = () => {
@@ -24,7 +25,7 @@ const Footer = () => {
                   <dd>〒338-0002　埼玉県さいたま市中央区大字下落合1010</dd>
                 </dl>
                 <div id="appearance">
-                  <img src="/images/footer/1.jpg" alt="埼玉県ペット火葬場" />
+                  <StaticImage src="../images/footer/1.jpg" alt="埼玉県ペット火葬場" />
                 </div>
               </div>
               <div id="greeting">

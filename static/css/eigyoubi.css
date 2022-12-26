@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+html {
+	position: static;
+}
+
+body {
+	font-family: Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+	line-height: 1.5;
+	color: #383838;
+	font-size: 15px;
+	word-wrap: break-word;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}

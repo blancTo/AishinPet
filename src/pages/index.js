@@ -13,6 +13,7 @@ import Nav from '../components/Nav';
 import Mainimege from '../components/Mainimege';
 import TopCalender from '../components/TopCalender'
 import Footer from '../components/Footer';
+import Iframe from 'react-iframe'
 
 export default function Home({data}) {
   return (
@@ -85,7 +86,12 @@ export default function Home({data}) {
             <section id="business-info">
               <article>
 
-              <iframe id="eigyoubi" width="100%" height="700" src="https://www.aishin2484.jp/business_guide.php" title="営業案内・ご予約状況" target="_top" />
+              <Iframe url="https://www.aishin2484.jp/business_guide.php"
+        width="100%"
+        id="parentframe"
+        className=""
+        display="block"
+        position="relative"/>
 
               </article>
               <section id="contact-information">
@@ -322,15 +328,12 @@ const jsonLd = {
 export const Head = () => (
   <>
     <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-    
     <script
      dangerouslySetInnerHTML={{
        __html: `
-       window.addEventListener('message', function(e) {
-        if (e.origin == "https://www.aishin2484.jp"){  //ドメインを記入
-          document.getElementById('eigyoubi').height = e.data; //IDを記入
-        }
-      }, false);
+       window.onload = function() {
+        
+       }
        `
      }}
 />

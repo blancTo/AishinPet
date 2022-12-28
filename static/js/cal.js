@@ -161,11 +161,11 @@ function cal_create(calId){
 	var calHTML = "<table border='0' cellspacing='0' cellpadding='0' class='cal'>";
 	calHTML += "<tr><th colspan='7'>";
 	calHTML += "<div class='cal_ui'>";
-	calHTML += "<input type='button' onclick='cal_move("+calId+",-1);' value='‹' />";
-	calHTML += "<input type='button' onclick='cal_move("+calId+",null);' value=' ' />";
-	calHTML += "<input type='button' onclick='cal_move("+calId+",1);' value='›' />";
+	calHTML += "<input type='button' onclick='cal_move("+calId+",-1);' value='<' />";
+	calHTML += "<input type='button' onclick='cal_move("+calId+",null);' value='" + year + "年" + calObj.monthName[month] + "' />";
+	calHTML += "<input type='button' onclick='cal_move("+calId+",1);' value='>' />";
 	calHTML += "</div>";
-	calHTML += "<p>" + year + "年" + calObj.monthName[month] + "</p></th></tr>";
+	calHTML += "</th></tr>";
 	calHTML += "<tr class='headline'>";
 	for(var i=0;i<7;i++){
 		var w = (calObj[calId].weekStart + i) % 7;

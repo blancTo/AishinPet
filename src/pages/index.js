@@ -84,10 +84,8 @@ export default function Home({data}) {
 
             <section id="eigyo-cal">
               
-              <div id="cal0" className="cal_wrapper">
-                Calendar Loading
-              </div>
-              
+            <Iframe url="https://www.aishin2484.jp/cal.html" width="100%" id="cal" display="block" position="relative"/>
+
               <p className='teikyu_txt'>定休日</p>
             </section>
 
@@ -268,6 +266,7 @@ export default function Home({data}) {
 
     </div>
     <Footer />
+
     </>
   )
 }

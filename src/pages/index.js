@@ -77,21 +77,24 @@ export default function Home({data}) {
 
       <section className="container">
         <div className="wrap">
+
           <h5 className="midasi"><span><img src="/images/icon/1.png" alt="営業お知らせアイコン" /></span>営業のお知らせ</h5>
+
           <div id="business-day">
+
             <section id="eigyo-cal">
-              <TopCalender />
+              
+              <div id="cal0" className="cal_wrapper">
+                Calendar Loading
+              </div>
+              
               <p className='teikyu_txt'>定休日</p>
             </section>
+
             <section id="business-info">
               <article>
 
-              <Iframe url="https://www.aishin2484.jp/business_guide.php"
-        width="100%"
-        id="parentframe"
-        className=""
-        display="block"
-        position="relative"/>
+              <Iframe url="https://www.aishin2484.jp/business_guide.php" width="100%" id="parentframe" display="block" position="relative"/>
 
               </article>
               <section id="contact-information">
@@ -336,7 +339,9 @@ export const Head = () => (
        }
        `
      }}
-/>
+     />
+     <link rel="stylesheet" href="/css/cal.css" type="text/css"></link>
+     <script type="text/javascript" charset="UTF-8" src="/js/cal.js"></script>
   </>
 )
 

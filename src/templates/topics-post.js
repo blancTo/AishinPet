@@ -17,6 +17,7 @@ const siteurl = "https://www.aishin2484.jp";
 const TopicsPost = ({data}) => {
   return (
     <>
+    <Seo title={data.microcmsTopics.title} />
         <Header />
         <Nav />
         <p id="page-top"><AnchorLink offset="0" to={'/topics/' + data.microcmsTopics.category.slug + '/' + data.microcmsTopics.topicsId + '/#pagetop'} title="Pagetop"><FontAwesomeIcon icon={faChevronUp} /></AnchorLink></p>
@@ -56,7 +57,7 @@ const TopicsPost = ({data}) => {
           />
         </section>
         <Layout>
-            <Seo />
+            
 
             <section id="main">
                 <h1 id="display-item2">

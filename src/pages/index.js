@@ -11,7 +11,6 @@ import Seo from '../components/Seo';
 import Header from '../components/Header';
 import Nav from '../components/Nav';
 import Mainimege from '../components/Mainimege';
-import TopCalender from '../components/TopCalender'
 import Footer from '../components/Footer';
 import Iframe from 'react-iframe'
 
@@ -289,7 +288,7 @@ const jsonLd = {
             "description":"埼玉のペット火葬・葬儀のことなら「愛心ペットセレモニー埼玉」にお任せ下さい。猫・犬はもちろん、うさぎや小鳥の火葬・葬儀も対応。サービス提供エリア（さいたま市、川越市、所沢市、新座市、朝霞市、狭山市）",
             "url":"https://www.aishin2484.jp/"
           },
-          "nextItem":"https://www.aishin2484.jp/#listItem"
+          "nextItem":"https://www.aishin2484.jp/price-guide/#listItem"
         }
       ]
     },
@@ -311,7 +310,7 @@ const jsonLd = {
         "@id":"https://www.aishin2484.jp/#breadcrumblist"
       },
       "datePublished":"2022-12-19T01:06:53+09:00",
-      "dateModified":"2022-12-24T3:08:17+09:00"
+      "dateModified":"2023-01-05T3:00:07+09:00"
     },
     {
       "@type":"WebSite",
@@ -330,17 +329,8 @@ const jsonLd = {
 export const Head = () => (
   <>
     <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-    <script
-     dangerouslySetInnerHTML={{
-       __html: `
-       window.onload = function() {
-        
-       }
-       `
-     }}
-     />
-     <link rel="stylesheet" href="/css/cal.css" type="text/css"></link>
-     <script type="text/javascript" charset="UTF-8" src="/js/cal.js"></script>
+    <link rel="stylesheet" href="/css/cal.css" type="text/css"></link>
+    <script type="text/javascript" charset="UTF-8" src="/js/cal.js"></script>
   </>
 )
 

@@ -15,7 +15,7 @@ const SEO = ({ title, description, image, article }) => {
   const { pathname } = useLocation()
 
   const seo = {
-    title: title ? `${title} | ${defaultTitle}` : defaultTitle,
+    title: `${title}`,
     description: description || defaultDescription,
     image: `${siteUrl}${image || defaultImage}`,
     url: `${siteUrl}${pathname}`,

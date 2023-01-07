@@ -10,7 +10,7 @@ import PageTitle from '../../../components/PageTitle';
 import PageTop from '../../../components/PageTop';
 
 const pagemeta = {
-    subTitle:`コラム`,
+    subTitle:`コラム｜埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉`,
     slug:`column`
 }
 

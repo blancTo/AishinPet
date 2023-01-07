@@ -10,7 +10,7 @@ import Layout from '../components/Layout';
 import { Link } from "gatsby"
 
 const pagemeta = {
-  subTitle:`ペット葬儀の流れ`,
+  subTitle:`ペット葬儀の流れ | 埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉`,
   slug:`flow-funeral`
 }
 

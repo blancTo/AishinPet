@@ -8,7 +8,7 @@ import PageTop from '../components/PageTop';
 import Layout from '../components/Layout';
 
 const pagemeta = {
-    subTitle:`所沢市にお住まいの方へ`,
+    subTitle:`ペット火葬所沢市 | 愛心ペットセレモ二ー埼玉`,
     slug:`tokorozawa`
 }
 
@@ -282,7 +282,7 @@ const jsonLd = {
           "item":{
             "@type":"WebPage",
             "@id":"https://www.aishin2484.jp/tokorozawa/",
-            "name":"埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉｜所沢市にお住まいの方へ",
+            "name":"ペット火葬所沢市 | 愛心ペットセレモ二ー埼玉",
             "description":"埼玉県のペット火葬・葬儀のことなら「愛心ペットセレモニー埼玉」の所沢市にお住まいの方へ。猫・犬はもちろん、うさぎや小鳥の火葬・葬儀も対応。",
             "url":"https://www.aishin2484.jp/tokorozawa/"
           },
@@ -298,7 +298,7 @@ const jsonLd = {
       "@type":"WebPage",
       "@id":"https://www.aishin2484.jp/tokorozawa/#webpage",
       "url":"https://www.aishin2484.jp/tokorozawa/",
-      "name":"埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉｜所沢市にお住まいの方へ",
+      "name":"ペット火葬所沢市 | 愛心ペットセレモ二ー埼玉",
       "description":"埼玉のペット火葬・葬儀のことなら「愛心ペットセレモニー埼玉」の所沢市にお住まいの方へ。猫・犬はもちろん、うさぎや小鳥の火葬・葬儀も対応。サービス提供エリア（さいたま市、川越市、所沢市、新座市、朝霞市、狭山市）",
       "inLanguage":"ja",
       "isPartOf":{

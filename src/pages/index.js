@@ -91,7 +91,9 @@ export default function Home({data}) {
             <section id="business-info">
               <article>
 
-              <Iframe url="https://www.aishin2484.jp/business_guide.php" width="100%" id="parentframe" display="block" position="relative"/>
+                <div className="eigyo-info">
+                  <Iframe url="https://www.aishin2484.jp/business_guide.php" width="100%" height="450" />
+                </div>
 
               </article>
               <section id="contact-information">

@@ -17,7 +17,7 @@ const siteurl = "https://www.aishin2484.jp";
 const TopicsPost = ({data}) => {
   return (
     <>
-    <Seo title={data.microcmsTopics.title} />
+    <Seo title={data.microcmsTopics.title + '｜トピックス｜埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉'} />
         <Header />
         <Nav />
         <p id="page-top"><AnchorLink offset="0" to={'/topics/' + data.microcmsTopics.category.slug + '/' + data.microcmsTopics.topicsId + '/#pagetop'} title="Pagetop"><FontAwesomeIcon icon={faChevronUp} /></AnchorLink></p>

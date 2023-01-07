@@ -8,7 +8,7 @@ import PageTop from '../components/PageTop';
 import Layout from '../components/Layout';
 
 const pagemeta = {
-    subTitle:`さいたま市にお住まいの方へ`,
+    subTitle:`ペット火葬さいたま市 | 愛心ペットセレモ二ー埼玉`,
     slug:`saitama`
 }
 
@@ -290,7 +290,7 @@ const jsonLd = {
             "item":{
               "@type":"WebPage",
               "@id":"https://www.aishin2484.jp/saitama/",
-              "name":"埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉｜さいたま市にお住まいの方へ",
+              "name":"ペット火葬さいたま市 | 愛心ペットセレモ二ー埼玉",
               "description":"埼玉県のペット火葬・葬儀のことなら「愛心ペットセレモニー埼玉」のさいたま市にお住まいの方へ。猫・犬はもちろん、うさぎや小鳥の火葬・葬儀も対応。",
               "url":"https://www.aishin2484.jp/saitama/"
             },
@@ -306,7 +306,7 @@ const jsonLd = {
         "@type":"WebPage",
         "@id":"https://www.aishin2484.jp/saitama/#webpage",
         "url":"https://www.aishin2484.jp/saitama/",
-        "name":"埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉｜さいたま市にお住まいの方へ",
+        "name":"ペット火葬さいたま市 | 愛心ペットセレモ二ー埼玉",
         "description":"埼玉のペット火葬・葬儀のことなら「愛心ペットセレモニー埼玉」のさいたま市にお住まいの方へ。猫・犬はもちろん、うさぎや小鳥の火葬・葬儀も対応。サービス提供エリア（さいたま市、川越市、所沢市、新座市、朝霞市、狭山市）",
         "inLanguage":"ja",
         "isPartOf":{
@@ -322,7 +322,7 @@ const jsonLd = {
         "@type":"WebSite",
         "@id":"https://www.aishin2484.jp/saitama/#website",
         "url":"https://www.aishin2484.jp/saitama/",
-        "name":"埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉｜さいたま市にお住まいの方へ",
+        "name":"ペット火葬さいたま市 | 愛心ペットセレモ二ー埼玉",
         "description":"埼玉のペット火葬・葬儀のことなら「愛心ペットセレモニー埼玉」のさいたま市にお住まいの方へ。猫・犬はもちろん、うさぎや小鳥の火葬・葬儀も対応。サービス提供エリア（さいたま市、川越市、所沢市、新座市、朝霞市、狭山市）",
         "inLanguage":"ja",
         "publisher":{

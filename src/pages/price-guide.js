@@ -8,7 +8,7 @@ import PageInfo from '../components/PageInfo';
 import Layout from '../components/Layout';
 
 const pagemeta = {
-  subTitle:`料金のご案内`,
+  subTitle:`料金のご案内 | 埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉`,
   slug:`price-guide`
 }
 

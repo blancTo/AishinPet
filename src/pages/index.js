@@ -18,7 +18,7 @@ export default function Home({data}) {
   return (
     <>
 
-    <Seo title="埼玉県ふじみ野市のペット火葬" />
+    <Seo title="埼玉県ふじみ野市のペット火葬｜埼玉のペット火葬（川越市、所沢市、さいたま市）｜愛心ペットセレモ二ー埼玉" />
 
     <Header />
 
@@ -92,7 +92,9 @@ export default function Home({data}) {
               <article>
 
                 <div className="eigyo-info">
-                  <Iframe url="https://www.aishin2484.jp/business_guide.php" width="100%" height="450" />
+                  
+                  <Iframe url="https://www.aishin2484.jp/business_guide.php" />
+                  
                 </div>
 
               </article>
@@ -328,11 +330,10 @@ const jsonLd = {
   ]
 }
 
+
 export const Head = () => (
   <>
-    <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-    <link rel="stylesheet" href="/css/cal.css" type="text/css"></link>
-    <script type="text/javascript" charset="UTF-8" src="/js/cal.js"></script>
+    <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>    
   </>
 )
 

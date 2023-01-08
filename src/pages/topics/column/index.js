@@ -10,13 +10,17 @@ import PageTitle from '../../../components/PageTitle';
 import PageTop from '../../../components/PageTop';
 
 const pagemeta = {
-    subTitle:`コラム｜埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉`,
+    subTitle:`コラム`,
     slug:`column`
 }
 
 const column = ({data}) => {
   return (
     <>
+        <Seo
+          title={pagemeta.subTitle + '｜埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉'}
+          description="コラムの記事一覧ページです"
+        />
         <Header />
         <Nav />
         <PageTop slug={pagemeta.slug} />
@@ -31,29 +35,24 @@ const column = ({data}) => {
         />
         </section>
         <LayoutTopics>
-            <Seo
-            title={pagemeta.subTitle}
-            description="コラムの記事一覧ページです"
-            />
+            
             <section id="main">
               <h1 id="display-item">{pagemeta.subTitle}の記事一覧</h1>
             
                 {data.allMicrocmsTopics.edges.map(({ node }) => (
                     <article class="list">
-                        <p class="date">
-                            <span className='cat_list'>{node.category.name}</span>
-                            <span class="blobdate">{node.date}</span>
+                      <p class="date">
+                        <span className='cat_list'>{node.category.name}</span>
+                        <span class="blobdate">{node.date}</span>
+                      </p>
+                      <div class="rack">
+                        <h1 class="arrange">
+                          <Link to={'/topics/' + node.topicsId}>{node.title}</Link>
+                        </h1>
+                        <p class="preface">
+                          <Link to={'/topics/' + node.topicsId}>{node.excerpt}</Link>
                         </p>
-                        <div class="rack">
-                            <h1 class="arrange">
-                                <a href={'/topics/' + node.topicsId}>{node.title}</a>
-                            </h1>
-                            <p class="preface">
-                                <a href={'/topics/' + node.topicsId}>
-                                  {node.excerpt}
-                                </a>
-                            </p>
-                        </div>
+                      </div>
                     </article>
                 ))}
             </section>

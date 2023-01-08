@@ -8,7 +8,7 @@ import PageTop from '../components/PageTop';
 import Layout from '../components/Layout';
 
 const pagemeta = {
-    subTitle:`アクセス | 埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉`,
+    subTitle:`アクセス`,
     slug:`access`
 }
 
@@ -16,7 +16,7 @@ export default function access() {
   return (
     <>
         <Seo
-        title={pagemeta.subTitle}
+        title={pagemeta.subTitle + ' | 埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉'}
         description="アクセス。愛心ペットセレモニー埼玉へのアクセスです。どうぞお気軽にお越しください。"
         />
         <Header />

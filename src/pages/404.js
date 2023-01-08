@@ -11,7 +11,7 @@ import PageTop from '../components/PageTop';
 import Layout from '../components/Layout';
 
 const pagemeta = {
-    subTitle:`ページが見つかりません｜埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉`,
+    subTitle:`ページが見つかりません`,
     slug:`notfound`
 }
 
@@ -19,7 +19,7 @@ export default function NotFound() {
   return (
     <>
       <Seo
-        title={pagemeta.subTitle}
+        title={pagemeta.subTitle + ' | 埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉'}
         description="お探しのページは、移動または削除された可能性があります。"
         />
         <Header />

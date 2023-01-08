@@ -20,6 +20,10 @@ const pagemeta = {
 const blog = ({data}) => {
   return (
     <>
+        <Seo
+          title={pagemeta.subTitle + '｜埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉'}
+          description="ブログの記事一覧ページです"
+        />
         <Header />
 
         <Nav />
@@ -41,10 +45,7 @@ const blog = ({data}) => {
               />
             </section>
         <LayoutTopics>
-            <Seo
-            title={pagemeta.subTitle}
-            description="ブログの記事一覧ページです"
-            />
+            
             <section id="main">
               <h1 id="display-item">{pagemeta.subTitle}の記事一覧</h1>
             
@@ -56,12 +57,10 @@ const blog = ({data}) => {
                         </p>
                         <div class="rack">
                             <h1 class="arrange">
-                                <a href={'/topics/' + node.topicsId}>{node.title}</a>
+                              <Link to={'/topics/' + node.topicsId}>{node.title}</Link>
                             </h1>
                             <p class="preface">
-                                <a href={'/topics/' + node.topicsId}>
-                                  {node.excerpt}
-                                </a>
+                              <Link to={'/topics/' + node.topicsId}>{node.excerpt}</Link>
                             </p>
                         </div>
                     </article>

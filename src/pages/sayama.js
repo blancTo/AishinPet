@@ -8,7 +8,7 @@ import PageTop from '../components/PageTop';
 import Layout from '../components/Layout';
 
 const pagemeta = {
-    subTitle:`狭山市にお住まいの方へ｜埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉`,
+    subTitle:`狭山市にお住まいの方へ`,
     slug:`sayama`
 }
 
@@ -16,7 +16,7 @@ export default function sayama() {
   return (
     <>
       <Seo
-        title={pagemeta.subTitle}
+        title={pagemeta.subTitle + '｜埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉'}
         description="狭山市にお住まいの方へ、ペット火葬について愛心ペットセレモニーからのご提案です。"
         />
         <Header />

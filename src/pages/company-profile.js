@@ -8,7 +8,7 @@ import PageTop from '../components/PageTop';
 import Layout from '../components/Layout';
 
 const pagemeta = {
-    subTitle:`会社概要｜埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉`,
+    subTitle:`会社概要`,
     slug:`company-profile`
 }
 
@@ -16,7 +16,7 @@ export default function companyProfile() {
   return (
     <>
         <Seo
-        title={pagemeta.subTitle}
+        title={pagemeta.subTitle + ' | 埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉'}
         description="会社概要。愛心ペットセレモニーのホームページをご覧頂きありがとうございます。これもお客様と亡くなられたご家族（ペット）にとって大切なご縁となれば嬉しい限りです。私は、愛犬と過ごした日々を合わせ、動物に携わる生活を20年以上続けております。"
         />
         <Header />

@@ -687,28 +687,41 @@ footer #links ul li {
     border: 1px solid #f1f1f1;
     padding: 5% 6%;
 }
-.eigyo-info { width: 100%; height: 500px; overflow: auto; padding: 2%; box-sizing: border-box;}
+.eigyo-info { width: 100%; box-sizing: border-box; padding: 2%;}
+
+
+
+@media (max-width: 768px) {
+	.eigyo-info { padding: 3%;}
+	.eigyo-info iframe {
+		width:100%; height: 652px!important; box-sizing: border-box;
+	}
+}
+
+@media (max-width: 480px) {
+	
+	.eigyo-info iframe {
+		width:100%; height: 750px!important; box-sizing: border-box;
+	}
+}
+
+@media (min-width: 1025px) {
 .eigyo-info iframe {
-	overflow: auto;
+	width:100%; height: 427px; box-sizing: border-box;
+}
 }
 
 iframe#cal {
     width: 100%;
 	height: 255px;
-
 }
 
-@media (max-width: 768px) {
-	iframe#parentframe {
-		width: 100%;	
-	}	
-}
+
 
 @media (orientation: landscape) and (max-width: 667px) {
-	iframe#parentframe {
-		width: 100%;
-		height: 720px;
-	
+	.eigyo-info { width: 100%; box-sizing: border-box; padding: 2%;}
+	.eigyo-info iframe {
+		width:100%; height: 572px!important; box-sizing: border-box;
 	}
 }
 
@@ -716,8 +729,8 @@ iframe#cal {
 	#business-day #business-info {
 		width: 100%!important;
 	}
-	iframe#parentframe {
+	.eigyo-info iframe {
 		width: 100%;
-		height: 675px;	
+		height: 427px;
 	}
 }

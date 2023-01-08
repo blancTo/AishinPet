@@ -8,7 +8,7 @@ import PageTop from '../components/PageTop';
 import Layout from '../components/Layout';
 
 const pagemeta = {
-    subTitle:`お問い合わせ｜埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉`,
+    subTitle:`お問い合わせ`,
     slug:`contactus`
 }
 
@@ -16,7 +16,7 @@ export default function contactus() {
   return (
     <>
       <Seo
-        title={pagemeta.subTitle}
+        title={pagemeta.subTitle + ' | 埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉'}
         description="お問い合わせページです。ご不明な点がありましたら、ご遠慮なくご相談ください。"
         />
         <Header />

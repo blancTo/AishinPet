@@ -8,7 +8,7 @@ import PageTop from '../components/PageTop';
 import Layout from '../components/Layout';
 
 const pagemeta = {
-    subTitle:`ペット火葬所沢市 | 愛心ペットセレモ二ー埼玉`,
+    subTitle:`ペット火葬所沢市`,
     slug:`tokorozawa`
 }
 
@@ -16,7 +16,7 @@ export default function tokorozawa() {
   return (
     <>
         <Seo
-        title={pagemeta.subTitle}
+        title={pagemeta.subTitle + '| 愛心ペットセレモ二ー埼玉'}
         description="所沢市にお住まいの方へ、ペット火葬について愛心ペットセレモニーからのご提案です。"
         />
         <Header />

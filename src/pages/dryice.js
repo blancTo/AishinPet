@@ -8,7 +8,7 @@ import PageTop from '../components/PageTop';
 import Layout from '../components/Layout';
 
 const pagemeta = {
-    subTitle:`ドライアイス店のご紹介 | 埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉`,
+    subTitle:`ドライアイス店のご紹介`,
     slug:`dryice`
 }
 
@@ -16,7 +16,7 @@ export default function dryice() {
   return (
     <>
         <Seo
-        title={pagemeta.subTitle}
+        title={pagemeta.subTitle + ' | 埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉'}
         description="ドライアイス店のご紹介"
         />
         <Header />

@@ -8,7 +8,7 @@ import PageTop from '../components/PageTop';
 import Layout from '../components/Layout';
 
 const pagemeta = {
-    subTitle:`商品のご案内 | 埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉`,
+    subTitle:`商品のご案内 `,
     slug:`goods`
 }
 
@@ -16,7 +16,7 @@ export default function goods() {
   return (
     <>
       <Seo
-        title={pagemeta.subTitle}
+        title={pagemeta.subTitle + ' | 埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉'}
         description="商品のご案内。分骨カプセルのキーホルダーやネックレス、お位牌などペットメモリアルグッズをご案内いたします。"
         />
         <Header />

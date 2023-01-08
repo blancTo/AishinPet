@@ -12,13 +12,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons"
 
 const pagemeta = {
-    subTitle:`トピックス｜埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉`,
+    subTitle:`トピックス`,
     slug:`topics`
 }
 
 const topics = ({ data }) => {
   return (
     <>
+        <Seo
+          title={pagemeta.subTitle + ' | 埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉'}
+          description="トトピックスの最近の記事一覧"
+        />
         <Header />
 
         <Nav />
@@ -39,10 +43,7 @@ const topics = ({ data }) => {
         </section>
 
         <LayoutTopics>
-            <Seo
-            title={pagemeta.subTitle}
-            description="トトピックスの最近の記事一覧"
-            />
+            
             <section id="main">
               <h1 id="display-item">{pagemeta.subTitle}の記事一覧</h1>
             

@@ -10,7 +10,7 @@ import Layout from '../components/Layout';
 import { Link } from "gatsby"
 
 const pagemeta = {
-    subTitle:`ペット火葬・葬儀に関する業務のご案内 | 埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉`,
+    subTitle:`ペット火葬・葬儀に関する業務のご案内`,
     slug:`guidance-business`
 }
 
@@ -18,7 +18,7 @@ export default function guidanceBusiness() {
   return (
     <>
         <Seo
-        title={pagemeta.subTitle}
+        title={pagemeta.subTitle + ' | 埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉'}
         description="埼玉県のペット火葬・葬儀のことなら「愛心ペットセレモニー埼玉」にお任せ下さい。猫・犬はもちろん、うさぎや小鳥の火葬・葬儀も対応。"
         />
         <Header />

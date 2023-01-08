@@ -13,63 +13,61 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons"
 
 const pagemeta = {
-    subTitle:`お知らせ｜埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉`,
+    subTitle:`お知らせ`,
     slug:`news`
 }
 
 const news = ({data}) => {
   return (
     <>
-        <Header />
-        <Nav />
+      <Seo
+        title={pagemeta.subTitle + ' | 埼玉のペット火葬（川越市、所沢市、さいたま市） | 愛心ペットセレモ二ー埼玉'}
+        description="お知らせの記事一覧ページ"
+      />
+      <Header />
+      <Nav />
+      
+      {data.allMicrocmsTopics.edges.map(({ node }) => (
+        <p id="page-top">
+          <AnchorLink offset="0" to={'/topics/' + node.category.slug + '/#pagetop'} title="Pagetop"><FontAwesomeIcon icon={faChevronUp} /></AnchorLink>
+        </p>
+      ))}
+
+      <section id="page-info" className="topics">
+        <BreadCrumbCat
+        title={pagemeta.subTitle}
+        slug="news"
+        />
+        <PageTitle
+        title={pagemeta.subTitle}
+        slug={pagemeta.slug}
+        />
+      </section>
+
+      <LayoutTopics>
+        <section id="main">
+          <h1 id="display-item">{pagemeta.subTitle}の記事一覧</h1>
         
-        {data.allMicrocmsTopics.edges.map(({ node }) => (
-          <p id="page-top">
-            <AnchorLink offset="0" to={'/topics/' + node.category.slug + '/#pagetop'} title="Pagetop"><FontAwesomeIcon icon={faChevronUp} /></AnchorLink>
-          </p>
-        ))}
-
-            <section id="page-info" className="topics">
-              <BreadCrumbCat
-              title={pagemeta.subTitle}
-              slug="news"
-              />
-              <PageTitle
-              title={pagemeta.subTitle}
-              slug={pagemeta.slug}
-              />
-            </section>
-        <LayoutTopics>
-            <Seo
-            title={pagemeta.subTitle}
-            description="お知らせの記事一覧ページ"
-            />
-            <section id="main">
-              <h1 id="display-item">{pagemeta.subTitle}の記事一覧</h1>
-            
-                {data.allMicrocmsTopics.edges.map(({ node }) => (
-
-                    
-                  
-                    <article class="list">
-                        <p class="date">
-                            <Link to={'/topics/' + node.category.slug}>{node.category.name}</Link>
-                            <span class="blobdate">{node.date}</span>
-                        </p>
-                        <div class="rack">
-                            <h1 class="arrange">
-                                <a href={'/topics/' + node.category.slug + '/' + node.topicsId}>{node.title}</a>
-                            </h1>
-                            <p class="preface">
-                                <a href={'/topics/' + node.category.slug + '/' + node.topicsId}>
-                                  {node.excerpt}
-                                </a>
-                            </p>
-                        </div>
-                    </article>
-                ))}
-            </section>
-        </LayoutTopics>
+          {data.allMicrocmsTopics.edges.map(({ node }) => (
+            <article class="list">
+              <p class="date">
+                <Link to={'/topics/' + node.category.slug}>{node.category.name}</Link>
+                <span class="blobdate">{node.date}</span>
+              </p>
+              <div class="rack">
+                <h1 class="arrange">
+                  <Link to={'/topics/' + node.category.slug + '/' + node.topicsId}>{node.title}</Link>
+                </h1>
+                <p class="preface">
+                  <Link to={'/topics/' + node.category.slug + '/' + node.topicsId}>
+                    {node.excerpt}
+                  </Link>
+                </p>
+              </div>
+            </article>
+          ))}
+        </section>
+      </LayoutTopics>
     </>
   )
 }

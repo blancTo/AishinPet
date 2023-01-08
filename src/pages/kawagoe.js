@@ -8,7 +8,7 @@ import PageTop from '../components/PageTop';
 import Layout from '../components/Layout';
 
 const pagemeta = {
-    subTitle:`ペット火葬川越市 | 愛心ペットセレモ二ー埼玉`,
+    subTitle:`川越市`,
     slug:`kawagoe`
 }
 
@@ -16,7 +16,7 @@ export default function kawagoe() {
   return (
     <>
       <Seo
-        title={pagemeta.subTitle}
+        title="ペット火葬川越市 | 愛心ペットセレモ二ー埼玉"
         description="川越市にお住まいの方へ、ペット火葬について愛心ペットセレモニーからのご提案です。"
         />
         <Header />

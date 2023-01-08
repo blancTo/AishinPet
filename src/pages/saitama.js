@@ -8,7 +8,7 @@ import PageTop from '../components/PageTop';
 import Layout from '../components/Layout';
 
 const pagemeta = {
-    subTitle:`ペット火葬さいたま市 | 愛心ペットセレモ二ー埼玉`,
+    subTitle:`ペット火葬さいたま市`,
     slug:`saitama`
 }
 
@@ -16,7 +16,7 @@ export default function saitama() {
   return (
     <>
         <Seo
-        title={pagemeta.subTitle}
+        title={pagemeta.subTitle + '｜愛心ペットセレモ二ー埼玉'}
         description="さいたま市にお住まいの方へ、ペット火葬について愛心ペットセレモニーからのご提案です。"
         />
         <Header />
